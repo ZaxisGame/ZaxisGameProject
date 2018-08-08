@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LifeManager_M : MonoBehaviour {
     private int currentLife = 3;
     private int firstLife = 3;
 
-    private GameObject lifePre;
     private GameObject[] lifesObj;
-    private Vector3 lifePos = new Vector3(0.5f, 0.5f, 0);
 
 	// Use this for initialization
 	void Start () {
@@ -34,9 +33,12 @@ public class LifeManager_M : MonoBehaviour {
         }
     }
 
-    void Damage(){
+    public void Damage(){
         currentLife--;
         DrawLife(currentLife);
+        if(currentLife==0){
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
 
