@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Motohoshi/sakanatest_M.unity
+    guid: b7288d591dc56432498baaf938bde00c
+  m_configObjects: {}
